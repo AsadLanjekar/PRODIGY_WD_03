@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.controls {
+  margin-bottom: 15px;
+}
+
+.controls select, .controls label {
+  font-size: 1em;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 5px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5em;
+  background-color: #222;
+  border: 2px solid #444;
+  color: #00eaff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  text-shadow: 0 0 5px #00eaff;
+}
+
+.cell:hover {
+  background-color: #333;
+}
+
+#statusText {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #ffcc00;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #00eaff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #00c4d6;
+}
+
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2em;
+  }
+}
+.cell.winner {
+  background-color: #00eaff;
+  color: black;
+  box-shadow: 0 0 10px #00eaff;
+}
